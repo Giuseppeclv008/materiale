@@ -16,7 +16,7 @@ body {
 
 /* Info box styling */
 .info-box {
-  background-color: #E3F2FD;
+  background-color: #dde8ef;
   color: #1565C0;
   border: 1px solid #BBDEFB;
   padding: 1rem;
@@ -29,7 +29,22 @@ body {
 /* CSS Grid Layout */
 .mygridcontainer {
   border: 2px solid #4C6B8C;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  /* It divides the elements in three different columns, applies the same dimension
+  in the repeat funct, fr stands for fraction */
   padding: 1rem;
+}
+
+#item-grid3{
+  background-color: orange;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  /* grid-area: 1 / 1 / 3 / 3; does the same thing */
 }
 
 .mygridcontainer div {
@@ -47,11 +62,22 @@ body {
 /* CSS Flexbox */
 .myfbcontainer {
   border: 2px solid #3A6B3B;
+  display: flex;
+  flex-direction: row;
+  /* determines the positioning of the elements in the flexbox */
+  /* flex-direction: column-reverse; places the elements in columns 
+  following a reverse order */
+  /* justify-content: places the elements ina detrmined manner */
+
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* it goes "a capo" when the page is shrunk  */
+
   padding: 1rem;
 }
 
 .myfbcontainer div {
-  border: 2px dotted #3A6B3B;
+  border: 2px solid #3A6B3B;
   background-color: #A6D8A0;
   color: #2E4A2F;
   font-size: 1.25rem;
